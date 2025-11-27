@@ -4,15 +4,15 @@
 ## AnyKernel setup
 # begin properties
 properties() { '
-kernel.string=not_Kernel by @skye // pa1n
+kernel.string=not_Kernel by @Tutoo // pa1n
 do.devicecheck=1
 do.modules=0
 do.systemless=1
 do.cleanup=1
 do.cleanuponabort=0
-device.name1=r8q
-device.name2=r8qxx
-device.name3=r8qxxx
+device.name1=x1q
+device.name2=x2q
+device.name3=x3q
 supported.versions=15 - 18
 supported.patchlevels=
 '; } # end properties
@@ -40,7 +40,7 @@ gsi=$(file_getprop /system/build.prop ro.product.system.device);
 cos=$(file_getprop /system/build.prop ro.product.system.brand);
 if [ -n "$oneui" ]; then
    ui_print " "
-   ui_print " • OneUI ROM detected! • " # OneUI 7.X+ bomb
+   ui_print " • OneUI ROM detected! • " # OneUI 8.X+ bomb
    ui_print " "
    ui_print " • Patching Fingerprint Sensor... • "
    patch_cmdline "android.is_aosp" "android.is_aosp=0";
@@ -75,9 +75,6 @@ else
    ui_print " • Spoofing verified boot state to green... • "
    patch_cmdline "ro.boot.verifiedbootstate" "ro.boot.verifiedbootstate=green";
 fi
-ui_print " "
-ui_print " • Patching vbmeta unconditionally... • "
-dd if=$home/vbmeta.img of=/dev/block/platform/soc/1d84000.ufshc/by-name/vbmeta
 
 ui_print " "
 ui_print " • Patching dtbo unconditionally... • "
