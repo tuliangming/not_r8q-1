@@ -11,8 +11,8 @@ do.systemless=1
 do.cleanup=1
 do.cleanuponabort=0
 device.name1=x1q
-device.name2=x2q
-device.name3=x3q
+device.name2=y2q
+device.name3=z3q
 supported.versions=15 - 18
 supported.patchlevels=
 '; } # end properties
