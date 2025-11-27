@@ -1,4 +1,4 @@
-name: not x1q build
+name: not x1q build kernel
 
 on:
   workflow_dispatch:
